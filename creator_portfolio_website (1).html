@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Brand Collaboration Portfolio & Media Kit</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Palette: Pastel Blue + Pastel Green + Cream/White + Dark Slate */
+            --pastel-blue: #C2E0E7;
+            --pastel-blue-light: #E6F3F6;
+            --pastel-blue-deep: #A0C4DF;
+            --pastel-green: #C8E6C9;
+            --pastel-green-light: #EAF5EA;
+            --pastel-green-deep: #A8D5BA;
+            --cream-bg: #FAFAF7;
+            --card-bg: rgba(255, 255, 255, 0.75);
+            --card-border: rgba(200, 230, 201, 0.4);
+            --text-dark: #2C3E43;
+            --text-muted: #5B7278;
+            --accent-gold: #E2C044;
+            --tape-color: rgba(225, 240, 230, 0.65);
+            
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --font-handwriting: 'Caveat', cursive;
+
+            --shadow-soft: 0 10px 30px -5px rgba(44, 62, 67, 0.07);
+            --shadow-hover: 0 18px 40px -10px rgba(44, 62, 67, 0.12);
+            --radius-main: 24px;
+            --transition-smooth: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Dark/Night Sky Atmosphere Toggle Palette */
+        [data-theme="night"] {
+            --pastel-blue: #2B4C59;
+            --pastel-blue-light: #1A313B;
+            --pastel-blue-deep: #436C7D;
+            --pastel-green: #294D38;
+            --pastel-green-light: #183324;
+            --pastel-green-deep: #3A694C;
+            --cream-bg: #121D20;
+            --card-bg: rgba(26, 43, 48, 0.8);
+            --card-border: rgba(67, 108, 125, 0.3);
+            --text-dark: #E8F1F3;
+            --text-muted: #9BB0B6;
+            --tape-color: rgba(67, 108, 125, 0.4);
+        }
+
+        /* Base Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--cream-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.55;
+            animation: floatBlob 18s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: var(--pastel-blue);
+        }
+
+        .blob-2 {
+            bottom: -15%;
+            right: -10%;
+            width: 55vw;
+            height: 55vw;
+            background: var(--pastel-green);
+            animation-delay: -6s;
+        }
+
+        .blob-3 {
+            top: 40%;
+            left: 30%;
+            width: 35vw;
+            height: 35vw;
+            background: var(--pastel-blue-light);
+            animation-delay: -12s;
+        }
+
+        @keyframes floatBlob {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(60px, 40px) scale(1.08); }
+        }
+
+        /* Tiny floating stars background */
+        .celestial-sparkle {
+            position: absolute;
+            color: var(--accent-gold);
+            opacity: 0.6;
+            pointer-events: none;
+            animation: sparklePulse 3s infinite ease-in-out alternate;
+        }
+
+        @keyframes sparklePulse {
+            0% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
+            100% { opacity: 0.8; transform: scale(1.2) rotate(15deg); }
+        }
+
+        /* Global Container & Typography */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        section {
+            padding: 90px 0;
+            position: relative;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .section-title-wrap {
+            text-align: center;
+            margin-bottom: 55px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-handwriting);
+            font-size: 1.8rem;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.75rem;
+            letter-spacing: -0.5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '✦';
+            position: absolute;
+            right: -30px;
+            top: -10px;
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-main);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-smooth);
+        }
+
+        .glass-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-4px);
+        }
+
+        /* Scrapbook Elements */
+        .tape {
+            position: absolute;
+            width: 90px;
+            height: 28px;
+            background: var(--tape-color);
+            backdrop-filter: blur(4px);
+            border: 1px dashed rgba(255,255,255,0.5);
+            opacity: 0.85;
+            z-index: 5;
+        }
+
+        .tape-top-center {
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-1.5deg);
+        }
+
+        .tape-top-left {
+            top: -12px;
+            left: -15px;
+            transform: rotate(-12deg);
+        }
+
+        .tape-top-right {
+            top: -12px;
+            right: -15px;
+            transform: rotate(10deg);
+        }
+
+        .handwritten {
+            font-family: var(--font-handwriting);
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        /* Buttons & CTAs */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--pastel-blue-deep), var(--pastel-green-deep));
+            color: #1A2E33;
+            box-shadow: 0 6px 20px rgba(160, 196, 223, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(160, 196, 223, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.6);
+            color: var(--text-dark);
+            border: 1px solid var(--card-border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1050px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(250, 250, 247, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 32px rgba(44, 62, 67, 0.05);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-logo {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--pastel-blue-deep);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 140px;
+            padding-bottom: 60px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-photo-wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Polaroid Photo Frame */
+        .polaroid-frame {
+            background: #FFFFFF;
+            padding: 16px 16px 60px 16px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(44, 62, 67, 0.1);
+            transform: rotate(-3deg);
+            transition: var(--transition-smooth);
+            max-width: 360px;
+            width: 100%;
+            position: relative;
+        }
+
+        .polaroid-frame:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .polaroid-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .polaroid-caption {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: var(--font-handwriting);
+            font-size: 1.8rem;
+            color: #334E55;
+        }
+
+        .floating-badge {
+            position: absolute;
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--pastel-green-deep);
+            animation: floatBadge 4s infinite ease-in-out alternate;
+        }
+
+        .badge-1 { top: 20px; left: -20px; animation-delay: 0s; }
+        .badge-2 { bottom: 40px; right: -20px; animation-delay: -2s; }
+
+        @keyframes floatBadge {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: var(--pastel-blue-light);
+            border: 1px solid var(--pastel-blue-deep);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            width: fit-content;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 1.15;
+            color: var(--text-dark);
+        }
+
+        .hero-title span {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: var(--pastel-green);
+            z-index: -1;
+            border-radius: 6px;
+            opacity: 0.6;
+        }
+
+        .hero-bio {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 520px;
+        }
+
+        .hero-socials {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 5px;
+        }
+
+        .social-icon-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .social-icon-btn:hover {
+            background: var(--pastel-blue-deep);
+            color: #FFF;
+            transform: translateY(-3px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            animation: bounceScroll 2s infinite;
+        }
+
+        @keyframes bounceScroll {
+            0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+            40% { transform: translate(-50%, -8px); }
+            60% { transform: translate(-50%, -4px); }
+        }
+
+        .currently-section {
+            padding: 30px 0;
+        }
+
+        .currently-card {
+            padding: 24px 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            align-items: center;
+            position: relative;
+        }
+
+        .currently-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .currently-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: var(--pastel-green-light);
+            border: 1px solid var(--pastel-green-deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        .currently-text label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .currently-text span {
+            font-weight: 600;
+            font-size: 0.98rem;
+            color: var(--text-dark);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .about-main-card {
+            padding: 40px;
+            position: relative;
+        }
+
+        .quote-box {
+            margin: 25px 0;
+            padding: 20px 25px;
+            background: var(--pastel-blue-light);
+            border-left: 4px solid var(--pastel-blue-deep);
+            border-radius: 8px 16px 16px 8px;
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        .about-notes-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .note-card {
+            padding: 25px;
+            position: relative;
+            border-radius: 18px;
+        }
+
+        .note-card-1 {
+            background: var(--pastel-green-light);
+            transform: rotate(1.5deg);
+        }
+
+        .note-card-2 {
+            background: #FFF;
+            transform: rotate(-1deg);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .category-card {
+            padding: 30px 24px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--pastel-blue-deep), var(--pastel-green-deep));
+        }
+
+        .category-icon-bg {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: var(--pastel-blue-light);
+            display: flex;
+            align-items: center;
+            justify-content: justify;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .category-title {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+        }
+
+        .category-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .socials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .social-corner-card {
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .social-corner-card:hover .social-arrow {
+            transform: translateX(5px);
+        }
+
+        .social-platform-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #FFF;
+        }
+
+        .icon-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .icon-youtube { background: #FF0000; }
+        .icon-tiktok { background: #000000; }
+        .icon-facebook { background: #1877F2; }
+
+        .social-info {
+            flex-grow: 1;
+        }
+
+        .social-handle {
+            font-weight: 700;
+            font-size: 1.05rem;
+            display: block;
+        }
+
+        .social-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .social-arrow {
+            font-size: 1rem;
+            color: var(--text-muted);
+            transition: var(--transition-smooth);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .featured-card {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .featured-card.featured-large {
+            grid-column: span 2;
+        }
+
+        .featured-thumb-wrap {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .featured-large .featured-thumb-wrap {
+            height: 280px;
+        }
+
+        .featured-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .featured-card:hover .featured-thumb {
+            transform: scale(1.06);
+        }
+
+        .platform-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            color: #FFF;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .views-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(4px);
+            color: var(--text-dark);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .featured-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .featured-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .featured-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--pastel-blue-deep);
+            text-decoration: none;
+        }
+
+        .portfolio-masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition-smooth);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(44, 62, 67, 0.85), transparent);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: #FFF;
+            transition: var(--transition-smooth);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(18, 29, 32, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content {
+            max-width: 850px;
+            width: 100%;
+            background: var(--cream-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        .lightbox-img {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .lightbox-caption {
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: #FFF;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .workflow-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .workflow-step {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--pastel-green-deep);
+            color: #FFF;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px auto;
+        }
+
+        .brand-tags-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .brand-tag {
+            padding: 10px 22px;
+            border-radius: 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            font-weight: 600;
+            font-size: 0.92rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+        }
+
+        .timeline-list {
+            position: relative;
+            padding-left: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .timeline-list::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 3px;
+            background: var(--pastel-blue-deep);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '✦';
+            position: absolute;
+            left: -32px;
+            top: 0;
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            background: var(--cream-bg);
+        }
+
+        .timeline-role {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .timeline-company {
+            color: var(--pastel-blue-deep);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .stat-card {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-weight: 600;
+        }
+
+        .skills-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .skill-chip {
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .skill-chip:hover {
+            background: var(--pastel-green-light);
+            transform: scale(1.05);
+        }
+
+        .journal-container {
+            padding: 40px;
+            position: relative;
+            background: #FFF;
+            border-radius: var(--radius-main);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .journal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .journal-sticker {
+            padding: 15px;
+            border: 2px dashed var(--pastel-blue-deep);
+            border-radius: 16px;
+            text-align: center;
+            font-family: var(--font-handwriting);
+            font-size: 1.6rem;
+            color: var(--text-dark);
+            background: var(--pastel-blue-light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .scrapbook-polaroid {
+            background: #FFF;
+            padding: 12px 12px 45px 12px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .scrapbook-polaroid:nth-child(odd) { transform: rotate(-2.5deg); }
+        .scrapbook-polaroid:nth-child(even) { transform: rotate(2.5deg); }
+
+        .scrapbook-polaroid:hover {
+            transform: rotate(0deg) scale(1.03);
+            z-index: 10;
+        }
+
+        .polaroid-gallery-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .contact-box {
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--pastel-blue-light), var(--pastel-green-light));
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-main);
+        }
+
+        .contact-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--card-border);
+            position: relative;
+        }
+
+        .footer-tagline {
+            font-family: var(--font-handwriting);
+            font-size: 1.8rem;
+            color: var(--text-muted);
+            margin: 10px 0;
+        }
+
+        /* Scroll To Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--pastel-blue-deep);
+            color: #FFF;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-soft);
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+            z-index: 900;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Responsiveness & Media Queries */
+        @media (max-width: 992px) {
+            .hero-grid, .about-grid, .experience-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-title { font-size: 2.8rem; }
+            .featured-grid { grid-template-columns: 1fr; }
+            .featured-card.featured-large { grid-column: span 1; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 5%;
+                width: 90%;
+                background: var(--cream-bg);
+                border: 1px solid var(--card-border);
+                border-radius: 20px;
+                flex-direction: column;
+                padding: 25px;
+                box-shadow: var(--shadow-hover);
+                display: none;
+            }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            section { padding: 60px 0; }
+            .contact-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+      ======================================================================
+      EASY CUSTOMIZATION SECTION
+      To edit values on your portfolio website, simply change the text 
+      inside the data attributes below or edit the inner HTML directly!
+      ======================================================================
+    -->
+    <div id="creator-data"
+        data-name="Aria Vance"
+        data-title="Study & Lifestyle Content Creator | Storyteller"
+        data-short-bio="Documenting real study routines, university life, personal growth, and authentic everyday struggles."
+        data-quote="I don't create a perfect version of student life. I document the real one."
+        data-instagram-handle="@aria.studies"
+        data-instagram-url="https://instagram.com/YOUR_INSTAGRAM_HANDLE"
+        data-youtube-handle="Aria Vance Studies"
+        data-youtube-url="https://youtube.com/@YOUR_YOUTUBE_HANDLE"
+        data-tiktok-handle="@aria_vance"
+        data-tiktok-url="https://tiktok.com/@YOUR_TIKTOK_HANDLE"
+        data-email="YOUR_EMAIL@example.com"
+        data-followers="125K+"
+        data-avg-views="45K"
+        data-engagement-rate="6.8%"
+        data-top-platform="Instagram Reels">
+    </div>
+
+    <!-- Background Canvas & Animated Celestial Blobs -->
+    <div class="bg-canvas">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        
+        <!-- Celestial Sparkles SVG -->
+        <span class="celestial-sparkle" style="top: 15%; left: 10%;">✦</span>
+        <span class="celestial-sparkle" style="top: 25%; right: 12%;">☾</span>
+        <span class="celestial-sparkle" style="top: 60%; left: 8%;">☼</span>
+        <span class="celestial-sparkle" style="top: 75%; right: 15%;">✦</span>
+    </div>
+
+    <nav class="navbar">
+        <a href="#hero" class="nav-logo">
+            <span>☾</span> Aria.Universe
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#content">Content</a></li>
+            <li><a href="#work">Featured Work</a></li>
+            <li><a href="#why-me">Why Collaborate</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" title="Toggle Atmosphere">
+                <i class="fa-regular fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Creator Photo with Polaroid Frame -->
+                <div class="hero-photo-wrap">
+                    <div class="polaroid-frame">
+                        <div class="tape tape-top-center"></div>
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Profile Photo Placeholder" class="polaroid-img" id="hero-profile-img">
+                        <div class="polaroid-caption">study & real life ✦</div>
+                    </div>
+                    <!-- Floating Celestial Badges -->
+                    <div class="floating-badge badge-1">
+                        <span>📖</span> Real Student Life
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <span>✦</span> Authentic UGC
+                    </div>
+                </div>
+
+                <!-- Intro Text -->
+                <div class="hero-content">
+                    <div class="hero-tag">
+                        <span>✦</span> Digital Scrapbook & Media Kit
+                    </div>
+                    <h1 class="hero-title">
+                        Documenting the <span>real journey</span>, not just the highlights.
+                    </h1>
+                    <p class="hero-bio" id="hero-bio-text">
+                        Hi, I'm Aria Vance. Study & Lifestyle Content Creator / Storyteller. I create relatable content around study life, admission struggles, and everyday productivity.
+                    </p>
+
+                    <div class="hero-socials">
+                        <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" class="social-icon-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://youtube.com/@YOUR_YOUTUBE_HANDLE" target="_blank" class="social-icon-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://tiktok.com/@YOUR_TIKTOK_HANDLE" target="_blank" class="social-icon-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="mailto:YOUR_EMAIL@example.com" class="social-icon-btn" title="Email"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+
+                    <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <a href="#contact" class="btn btn-primary">Let's Collaborate ✦</a>
+                        <a href="#work" class="btn btn-secondary">Explore Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#currently" class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <section class="currently-section" id="currently">
+        <div class="container">
+            <div class="glass-card currently-card">
+                <div class="tape tape-top-left"></div>
+                <div class="currently-item">
+                    <div class="currently-icon">📚</div>
+                    <div class="currently-text">
+                        <label>Currently Studying</label>
+                        <span>University Admission Prep</span>
+                    </div>
+                </div>
+                <div class="currently-item">
+                    <div class="currently-icon">📖</div>
+                    <div class="currently-text">
+                        <label>Currently Reading</label>
+                        <span>Atomic Habits</span>
+                    </div>
+                </div>
+                <div class="currently-item">
+                    <div class="currently-icon">🎨</div>
+                    <div class="currently-text">
+                        <label>Currently Creating</label>
+                        <span>Autumn Study Routine Vlog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Behind the screen</span>
+                <h2 class="section-title">A Little About Me</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="glass-card about-main-card">
+                    <div class="tape tape-top-right"></div>
+                    <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 15px;">Documenting reality over perfection</h3>
+                    <p style="margin-bottom: 15px; color: var(--text-muted);">
+                        I am a student and content creator documenting my journey through university prep, everyday life, productivity, and personal growth.
+                    </p>
+                    <p style="color: var(--text-muted);">
+                        I started creating content because I wanted to see study sessions that felt genuine—imperfect desks, real study burnouts, honest progress, and genuine wins.
+                    </p>
+
+                    <div class="quote-box">
+                        "I don't create a perfect version of student life. I document the real one."
+                    </div>
+
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">
+                        My audience relies on my page as a cozy, pressure-free corner of the internet where they find motivation, practical tools, and relatable storytelling.
+                    </p>
+                </div>
+
+                <div class="about-notes-stack">
+                    <div class="glass-card note-card note-card-1">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">✦ Why I Create</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">To bridge the gap between aspirational goals and realistic everyday habits.</p>
+                    </div>
+
+                    <div class="glass-card note-card note-card-2">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">☾ Audience Connection</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">High engagement from ambitious high school & university students looking for genuine recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">What I share</span>
+                <h2 class="section-title">Content Pillars</h2>
+            </div>
+
+            <div class="categories-grid">
+                <div class="glass-card category-card">
+                    <div class="category-icon-bg">📚</div>
+                    <h3 class="category-title">Study Content</h3>
+                    <p class="category-desc">Study routines, admission prep, practice strategies, realistic study sessions & desk setups.</p>
+                </div>
+
+                <div class="glass-card category-card">
+                    <div class="category-icon-bg">☕</div>
+                    <h3 class="category-title">Student Life</h3>
+                    <p class="category-desc">Day-in-my-life vlogs, admission struggles, university prep, and relatable student moments.</p>
+                </div>
+
+                <div class="glass-card category-card">
+                    <div class="category-icon-bg">🌿</div>
+                    <h3 class="category-title">Lifestyle</h3>
+                    <p class="category-desc">Personal updates, daily routines, cozy aesthetic snippets, stationery, and wellness habits.</p>
+                </div>
+
+                <div class="glass-card category-card">
+                    <div class="category-icon-bg">🎬</div>
+                    <h3 class="category-title">Storytelling</h3>
+                    <p class="category-desc">Narrative voiceovers, personal observations, reflections on growth, and honest conversations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="socials">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Connect with me</span>
+                <h2 class="section-title">My Corners of the Internet</h2>
+            </div>
+
+            <div class="socials-grid">
+                <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" class="glass-card social-corner-card">
+                    <div class="social-platform-icon icon-instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-handle" id="social-ig-handle">@aria.studies</span>
+                        <span class="social-desc">Reels, Study Aesthetic & Stories</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+                </a>
+
+                <a href="https://youtube.com/@YOUR_YOUTUBE_HANDLE" target="_blank" class="glass-card social-corner-card">
+                    <div class="social-platform-icon icon-youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-handle" id="social-yt-handle">Aria Vance</span>
+                        <span class="social-desc">Long-form Vlogs & Study Vlogs</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+                </a>
+
+                <a href="https://tiktok.com/@YOUR_TIKTOK_HANDLE" target="_blank" class="glass-card social-corner-card">
+                    <div class="social-platform-icon icon-tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-handle" id="social-tt-handle">@aria_vance</span>
+                        <span class="social-desc">Short-form relatable content</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Portfolio</span>
+                <h2 class="section-title">Featured Content & Videos</h2>
+            </div>
+
+            <div class="featured-grid">
+                <!-- Video 1 (Large Card Placeholder) -->
+                <div class="glass-card featured-card featured-large">
+                    <div class="featured-thumb-wrap">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail" class="featured-thumb">
+                        <span class="platform-badge"><i class="fa-brands fa-instagram"></i> Instagram Reel</span>
+                        <span class="views-badge">120K+ Views</span>
+                    </div>
+                    <div class="featured-body">
+                        <div>
+                            <h3 class="featured-title">Realistic 6 AM Study Routine for University Entrance Exams</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Focusing on study discipline without burnouts.</p>
+                        </div>
+                        <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" class="featured-link">
+                            Watch Video <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video 2 Placeholder -->
+                <div class="glass-card featured-card">
+                    <div class="featured-thumb-wrap">
+                        <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail" class="featured-thumb">
+                        <span class="platform-badge"><i class="fa-brands fa-youtube"></i> YouTube Short</span>
+                        <span class="views-badge">85K Views</span>
+                    </div>
+                    <div class="featured-body">
+                        <div>
+                            <h3 class="featured-title">How I Organize My Exam Notes & Study Tools</h3>
+                        </div>
+                        <a href="https://youtube.com/@YOUR_YOUTUBE_HANDLE" target="_blank" class="featured-link">
+                            Watch Short <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video 3 Placeholder -->
+                <div class="glass-card featured-card">
+                    <div class="featured-thumb-wrap">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail" class="featured-thumb">
+                        <span class="platform-badge"><i class="fa-brands fa-tiktok"></i> TikTok</span>
+                        <span class="views-badge">210K Views</span>
+                    </div>
+                    <div class="featured-body">
+                        <div>
+                            <h3 class="featured-title">A Honest Day-in-My-Life as a Student</h3>
+                        </div>
+                        <a href="https://tiktok.com/@YOUR_TIKTOK_HANDLE" target="_blank" class="featured-link">
+                            Watch TikTok <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Visuals & Edit Concepts</span>
+                <h2 class="section-title">Creative Showcase</h2>
+            </div>
+
+            <div class="portfolio-masonry">
+                <div class="portfolio-item" onclick="openLightbox('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1000&q=80', 'Study Session Visual Aesthetics')">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80" alt="Creative Visual" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h4>Study Desk Setup</h4>
+                        <span style="font-size: 0.8rem;">Click to expand</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="openLightbox('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=80', 'Minimalist Digital Planning Concepts')">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="Creative Visual" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h4>Planner Concepts</h4>
+                        <span style="font-size: 0.8rem;">Click to expand</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="openLightbox('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=1000&q=80', 'Creative Journaling & Content Editing')">
+                    <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=600&q=80" alt="Creative Visual" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h4>Content Editing</h4>
+                        <span style="font-size: 0.8rem;">Click to expand</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal Container -->
+    <div class="lightbox-modal" id="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img" class="lightbox-img" alt="Enlarged Preview">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <section id="why-me">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Brand Value</span>
+                <h2 class="section-title">Why Work With Me?</h2>
+            </div>
+
+            <div class="categories-grid">
+                <div class="glass-card category-card">
+                    <h3 style="font-size: 1.2rem;">✦ Realistic Authenticity</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-muted);">I focus on honest recommendations that build genuine trust rather than glossy ad scripts.</p>
+                </div>
+
+                <div class="glass-card category-card">
+                    <h3 style="font-size: 1.2rem;">☾ Engaged Student Base</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-muted);">Direct reach to motivated high school, college, and university students seeking useful tools.</p>
+                </div>
+
+                <div class="glass-card category-card">
+                    <h3 style="font-size: 1.2rem;">☼ Creative Storytelling</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-muted);">Turning product integrations into relatable, narrative-driven stories that viewers finish watching.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px; text-align: center;">
+                <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 10px;">Naturally Fitting Brand Nicthes</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted);">I collaborate with brands that genuinely add value to a student's daily life.</p>
+
+                <div class="brand-tags-wrap">
+                    <span class="brand-tag">📖 Education & EdTech</span>
+                    <span class="brand-tag">✏️ Stationery & Books</span>
+                    <span class="brand-tag">💻 Tech & Productivity Apps</span>
+                    <span class="brand-tag">☕ Lifestyle & Beverages</span>
+                    <span class="brand-tag">🎒 Student Services</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">How we'll work together</span>
+                <h2 class="section-title">Collaboration Workflow</h2>
+            </div>
+
+            <div class="workflow-timeline">
+                <div class="glass-card workflow-step">
+                    <div class="step-num">1</div>
+                    <h4>Briefing</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;">Discussing goals & key campaign messaging.</p>
+                </div>
+
+                <div class="glass-card workflow-step">
+                    <div class="step-num">2</div>
+                    <h4>Concept</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;">Developing creative visual hooks and script.</p>
+                </div>
+
+                <div class="glass-card workflow-step">
+                    <div class="step-num">3</div>
+                    <h4>Creation</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;">Filming UGC, voiceovers & visual editing.</p>
+                </div>
+
+                <div class="glass-card workflow-step">
+                    <div class="step-num">4</div>
+                    <h4>Review</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;">Brand review & fine-tuning draft edits.</p>
+                </div>
+
+                <div class="glass-card workflow-step">
+                    <div class="step-num">5</div>
+                    <h4>Posting</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;">Publishing content & sharing analytical insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Skills & Capabilities</span>
+                <h2 class="section-title">My Creative Toolbox</h2>
+            </div>
+
+            <div class="skills-wrap">
+                <div class="skill-chip">🎬 Video Editing</div>
+                <div class="skill-chip">📱 UGC Content Creation</div>
+                <div class="skill-chip">📖 Visual Storytelling</div>
+                <div class="skill-chip">✍️ Script Writing</div>
+                <div class="skill-chip">📊 Social Media Strategy</div>
+                <div class="skill-chip">💡 Campaign Concepts</div>
+                <div class="skill-chip">🎧 Voiceover Narration</div>
+                <div class="skill-chip">📸 Aesthetic Photography</div>
+                <div class="skill-chip">💬 Community Moderation</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Background</span>
+                <h2 class="section-title">Experience & Highlights</h2>
+            </div>
+
+            <div class="experience-grid">
+                <!-- Timeline -->
+                <div class="timeline-list">
+                    <div class="timeline-item">
+                        <div class="timeline-role">Social Media Executive</div>
+                        <div class="timeline-company">Lobdhi</div>
+                        <div class="timeline-date">Current</div>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);">Managing content schedules, visual assets, and engagement strategy across platforms.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-role">Community Moderator</div>
+                        <div class="timeline-company">Apar's Classroom</div>
+                        <div class="timeline-date">Previous Role</div>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);">Facilitated student discussions, managed group community guidelines, and moderated live events.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-role">Junior Marketing Executive</div>
+                        <div class="timeline-company">Reach Savvy</div>
+                        <div class="timeline-date">Previous Role</div>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);">Assisted in digital campaign ideas and influencer communication workflows.</p>
+                    </div>
+                </div>
+
+                <!-- Mini Media Kit / Stats -->
+                <div class="stats-grid">
+                    <div class="glass-card stat-card">
+                        <div class="stat-number" id="stat-followers">125K+</div>
+                        <div class="stat-label">Total Followers</div>
+                    </div>
+
+                    <div class="glass-card stat-card">
+                        <div class="stat-number" id="stat-avg-views">45K</div>
+                        <div class="stat-label">Avg Video Views</div>
+                    </div>
+
+                    <div class="glass-card stat-card">
+                        <div class="stat-number" id="stat-engagement">6.8%</div>
+                        <div class="stat-label">Engagement Rate</div>
+                    </div>
+
+                    <div class="glass-card stat-card">
+                        <div class="stat-number" style="font-size: 1.3rem; margin-top: 8px;">900K+</div>
+                        <div class="stat-label">Community Reach</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journal">
+        <div class="container">
+            <div class="journal-container">
+                <div class="tape tape-top-left"></div>
+                <div class="tape tape-top-right"></div>
+                <div class="section-title-wrap" style="margin-bottom: 30px;">
+                    <span class="section-subtitle">A few little things</span>
+                    <h2 class="section-title">Things I Love ✍</h2>
+                </div>
+
+                <div class="journal-grid">
+                    <div class="journal-sticker">✍ Creative Writing</div>
+                    <div class="journal-sticker">📖 Reading Books</div>
+                    <div class="journal-sticker">🎞 Editing Videos</div>
+                    <div class="journal-sticker">☁ Morning Coffee</div>
+                    <div class="journal-sticker">📚 Quiet Libraries</div>
+                    <div class="journal-sticker">✦ Midnight Ideas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="photo-gallery">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Moments & Memories</span>
+                <h2 class="section-title">Digital Scrapbook Gallery</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="scrapbook-polaroid">
+                    <div class="tape tape-top-center"></div>
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Scrapbook photo" class="polaroid-gallery-img">
+                    <p class="handwritten" style="text-align: center; margin-top: 10px;">desk setup ☕</p>
+                </div>
+
+                <div class="scrapbook-polaroid">
+                    <div class="tape tape-top-center"></div>
+                    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80" alt="Scrapbook photo" class="polaroid-gallery-img">
+                    <p class="handwritten" style="text-align: center; margin-top: 10px;">late study sessions ✦</p>
+                </div>
+
+                <div class="scrapbook-polaroid">
+                    <div class="tape tape-top-center"></div>
+                    <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80" alt="Scrapbook photo" class="polaroid-gallery-img">
+                    <p class="handwritten" style="text-align: center; margin-top: 10px;">daily thoughts 📖</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-box">
+                <span class="handwritten" style="font-size: 2rem;">Let's make something worth remembering</span>
+                <h2 class="contact-title">Have a Brand Collaboration Idea?</h2>
+                <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">
+                    Open for sponsored content, UGC creation, long-term brand ambassadorships, and creative student-focused campaigns.
+                </p>
+
+                <div class="contact-buttons">
+                    <a href="mailto:YOUR_EMAIL@example.com" class="btn btn-primary" id="contact-email-btn">
+                        <i class="fa-regular fa-envelope"></i> Email Me Directly
+                    </a>
+                    <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" class="btn btn-secondary">
+                        <i class="fa-brands fa-instagram"></i> DM on Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div style="font-size: 1.5rem; font-weight: 700; font-family: var(--font-serif);">Aria Vance ✦</div>
+            <div class="footer-tagline">Study. Create. Document. Repeat.</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 15px;">
+                © 2026 Aria Vance. All Rights Reserved. Created for Brand Collaborations & Media Kit.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        /* ==========================================================================
+           INTERACTIVE & CUSTOMIZATION LOGIC
+           ========================================================================== */
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load easy customization data into placeholders
+            const dataEl = document.getElementById('creator-data');
+            if (dataEl) {
+                const name = dataEl.getAttribute('data-name');
+                const bio = dataEl.getAttribute('data-short-bio');
+                const igHandle = dataEl.getAttribute('data-instagram-handle');
+                const ytHandle = dataEl.getAttribute('data-youtube-handle');
+                const ttHandle = dataEl.getAttribute('data-tiktok-handle');
+                const email = dataEl.getAttribute('data-email');
+                const followers = dataEl.getAttribute('data-followers');
+                const views = dataEl.getAttribute('data-avg-views');
+                const engagement = dataEl.getAttribute('data-engagement-rate');
+
+                // Fill UI targets if exists
+                if (document.getElementById('hero-bio-text')) document.getElementById('hero-bio-text').innerText = bio;
+                if (document.getElementById('social-ig-handle')) document.getElementById('social-ig-handle').innerText = igHandle;
+                if (document.getElementById('social-yt-handle')) document.getElementById('social-yt-handle').innerText = ytHandle;
+                if (document.getElementById('social-tt-handle')) document.getElementById('social-tt-handle').innerText = ttHandle;
+                if (document.getElementById('stat-followers')) document.getElementById('stat-followers').innerText = followers;
+                if (document.getElementById('stat-avg-views')) document.getElementById('stat-avg-views').innerText = views;
+                if (document.getElementById('stat-engagement')) document.getElementById('stat-engagement').innerText = engagement;
+                if (document.getElementById('contact-email-btn')) document.getElementById('contact-email-btn').href = `mailto:${email}`;
+            }
+
+            // Atmosphere / Theme Toggle (Day / Night Sky)
+            const themeBtn = document.getElementById('theme-toggle');
+            themeBtn.addEventListener('click', () => {
+                const currentTheme = document.body.getAttribute('data-theme');
+                if (currentTheme === 'night') {
+                    document.body.removeAttribute('data-theme');
+                    themeBtn.innerHTML = '<i class="fa-regular fa-moon"></i>';
+                } else {
+                    document.body.setAttribute('data-theme', 'night');
+                    themeBtn.innerHTML = '<i class="fa-solid fa-sun" style="color: #E2C044;"></i>';
+                }
+            });
+
+            // Mobile Navigation Toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            mobileBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu on clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Back to Top Button Visibility
+            const backToTopBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        /* Lightbox Functions */
+        function openLightbox(imgSrc, captionText) {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+
+            img.src = imgSrc;
+            caption.innerText = captionText;
+            modal.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
